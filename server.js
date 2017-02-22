@@ -37,4 +37,7 @@ app.get('/date/:dateInput', function(req, res){
   res.send(ans);
 });
 
-app.listen(8080);
+//app.listen(8080);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
