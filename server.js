@@ -7,6 +7,9 @@ var app = express();
 var moment = require('moment'); // moment library for parsing dates
 var path = require('path');
 
+
+app.set('port', (process.env.PORT || 5000));
+
 app.get('/', function(req,res) {
    // Create a landing page here!
   res.sendFile(path.join(__dirname+'/index.html'));
